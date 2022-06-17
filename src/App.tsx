@@ -11,7 +11,7 @@ function App() {
     fetchComments().then(comments=> {
       dispatch({ type: GET_COMMENTS, payload: comments });
     });
-  },[])
+  },[dispatch])
 
   return (
     <div className="App">

@@ -1,23 +1,13 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
-import Converter from "./Converter/Converter";
-import {useDispatch} from "react-redux";
-import {fetchComments, GET_COMMENTS} from "./Converter/actions";
+import ExchangeRate from "./components/ExchangeRate";
 
-function App() {
-  const dispatch = useDispatch();
-
-  useEffect(()=> {
-    fetchComments().then(comments=> {
-      dispatch({ type: GET_COMMENTS, payload: comments });
-    });
-  },[dispatch])
-
+export default function App() {
   return (
     <div className="App">
-      <Converter />
+      <header>
+        <ExchangeRate />
+      </header>
     </div>
   );
-}
-
-export default App;
+};

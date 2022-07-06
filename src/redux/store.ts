@@ -11,5 +11,5 @@ const store = configureStore({
 })
 
 export type AppDispatch = typeof store.dispatch;
-
+console.log('test git');
 export default store;
